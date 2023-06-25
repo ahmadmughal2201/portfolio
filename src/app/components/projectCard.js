@@ -48,7 +48,9 @@ const ProjectCard = ({ image, title, description, index }) => {
                     ref={videoRef}
                     src={image}
                     className="w-full mb-2 rounded-lg shadow-xl z-10"
-                    autoPlay loop 
+                    autoPlay
+                    loop
+                    muted
                 />
             );
         } else {
