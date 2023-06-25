@@ -37,13 +37,13 @@ const AboutMe = () => {
                 >
                     Asalamu Alaikum,
                     <br />
-                    A passionate third-year BSCS student with a strong foundation in programming. Recognized for my outstanding academic performance with straight As in the first year, I've honed my skills in C++, C#, React, Next.js, Tailwind, Flutter, .NET, and database technologies.
+                    A passionate third-year BSCS student with a strong foundation in programming. Recognized for my outstanding academic performance with straight As in the first year, Ive honed my skills in C++, C#, React, Next.js, Tailwind, Flutter, .NET, and database technologies.
                     <br />
                     What truly drives me is frontend design. I find joy in creating visually captivating and user-friendly interfaces. Fueled by my enthusiasm for design, I leverage tools like Figma to bring my ideas to life.
                     <br />
                     Beyond programming, I delve into ideologies and philosophies, expanding my worldview and fostering critical thinking.
                     <br />
-                    I'm excited to contribute my technical expertise, love for frontend design, and curiosity to deliver innovative projects and impactful solutions.
+                    Im excited to contribute my technical expertise, love for frontend design, and curiosity to deliver innovative projects and impactful solutions.
                 </motion.p>
             </div>
         </section>
