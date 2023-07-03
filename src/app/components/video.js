@@ -2,15 +2,14 @@
 import React from 'react';
 
 const YouTubeVideo = () => {
-    const isMobile = window.innerWidth <= 768;
 
     return (
         <div className="video-container px-32 py-20 bg-primaryLight  dark:bg-dark">
             <h2 className="text-3xl font-bold mb-4  dark:text-light">HIghlights</h2>
             <div className="flex flex-col justify-center items-center">
                 <iframe
-                    width={isMobile ? "340px" : "640px"}
-                    height={isMobile ? "340px" : "340px"}
+                    width='340'
+                    height='340'
                     src="https://www.youtube.com/embed/qdbPJPxcKqE?start=105"
                     title="YouTube video player"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
