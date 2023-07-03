@@ -58,7 +58,7 @@ const Design = () => {
                 </div>
 
                 <motion.div
-                    className='w-[370px] h-[370px] md:w-[500px] md:h-[500px] rounded-full absolute md:top-0 top-[351px] right-0 left-0 mx-auto md:left-[700px]'
+                    className='w-[370px] h-[370px] md:w-[500px] md:h-[500px] rounded-full absolute md:top-0 top-[345px] right-0 left-0 mx-auto md:left-[700px]'
                     style={{
                         backgroundImage: `url('/images/profile/circle.png')`,
                         backgroundSize: 'cover',
@@ -66,7 +66,7 @@ const Design = () => {
                     }}
                     initial={{ scale: 0 }}
                     animate={{ scale: 1 }}
-                    transition={{ duration: 0.5 }}
+                    transition={{ duration: 0.7 }}
                 />
                 <div className='relative ' >
                     <img src="/images/profile/me.png" alt="Profile Picture" className='
