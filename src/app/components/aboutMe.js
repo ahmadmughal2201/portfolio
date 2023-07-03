@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
+import { AnimatePresence, motion } from 'framer-motion';
 
 const AboutMe = () => {
     const [expanded, setExpanded] = useState(false);
@@ -24,8 +24,13 @@ const AboutMe = () => {
         },
     };
 
+    const toggleVariants = {
+        hidden: { opacity: 0, height: 0 },
+        visible: { opacity: 1, height: 'auto' },
+    };
+
     return (
-        <section id="about" className="px-32 pt-20 pb-20 bg-primaryLight dark:bg-dark">
+        <section id="about" className=" px-16 md:px-32 lg:px-32 pt-20 pb-20 bg-primaryLight dark:bg-dark">
             <div className="container mx-auto dark:text-light">
                 <motion.h2
                     className="text-3xl font-bold mb-4"
@@ -43,37 +48,35 @@ const AboutMe = () => {
                 >
                     Asalamu Alaikum,
                     <br />
-                    A passionate third-year BSCS student with a strong foundation in programming. Recognized for my outstanding academic performance with straight As in the first year,  honed my skills in C++, C#, React, Next.js, Tailwind, Flutter, .NET, and database technologies.
+                    A passionate third-year BSCS student with a strong foundation in programming. Recognized for my outstanding academic performance with straight As in the first year, I’vehoned my skills in C++, C#, React, Next.js, Tailwind, Flutter, .NET, and database technologies.
                     <br />
-                    {expanded && (
-                        <>
-                            What truly drives me is frontend design. I find joy in creating visually captivating and user-friendly interfaces. Fueled by my enthusiasm for design, I leverage tools like Figma to bring my ideas to life.
-                            <br />
-                            Beyond programming, I delve into ideologies and philosophies, expanding my worldview and fostering critical thinking.
-                            <br />
-                            Excited to contribute my technical expertise, love for frontend design, and curiosity to deliver innovative projects and impactful solutions.
-                        </>
-                    )}
+                    <AnimatePresence>
+                        {expanded && (
+                            <motion.div
+                                key="additionalContent"
+                                initial="hidden"
+                                animate="visible"
+                                exit="hidden"
+                                variants={toggleVariants}
+                            >
+                                What truly drives me is frontend design. I find joy in creating visually captivating and user-friendly interfaces. Fueled by my enthusiasm for design, I leverage tools like Figma to bring my ideas to life.
+                                <br />
+                                Beyond programming, I delve into ideologies and philosophies, expanding my worldview and fostering critical thinking.
+                                <br />
+                                Excited to contribute my technical expertise, love for frontend design, and curiosity to deliver innovative projects and impactful solutions.
+                            </motion.div>
+                        )}
+                    </AnimatePresence>
                 </motion.p>
-                {expanded ? (
-                    <motion.button
-                        onClick={toggleExpanded}
-                        className="bg-primaryDark text-light rounded-md px-4 py-2"
-                    >
-                        Show Less
-                    </motion.button>
-                ) : (
-                    <motion.button
-                        onClick={toggleExpanded}
-                        className="bg-primaryDark text-light rounded-md px-4 py-2"
-                    >
-                        Show More
-                    </motion.button>
-                )}
+                <motion.button
+                    onClick={toggleExpanded}
+                    className="bg-primaryDark text-light rounded-md px-4 py-2"
+                >
+                    {expanded ? 'Show Less' : 'Show More'}
+                </motion.button>
             </div>
         </section>
     );
 };
 
 export default AboutMe;
-

@@ -62,11 +62,11 @@ const Projects = () => {
 
     return (
         <div id="projects-section" className='bg-primaryLight dark:bg-dark w-full pt-20 pb-20'>
-        <div className="px-32  pt-10 pb-5">
-            <h2 className="text-3xl font-bold mb-4 dark:text-light  ">Projects</h2>
+        <div className="px-16 md:px-32   pt-10 pb-5">
+            <h2 className="text-3xl font-bold ml-0 pb-8 dark:text-light">Projects</h2>
 
             <motion.div
-                className="flex flex-wrap justify-center gap-1"
+                className="flex flex-wrap justify-center gap-3"
                 initial="hidden"
                 animate="visible"
                 ref={ref}

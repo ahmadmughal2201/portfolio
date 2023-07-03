@@ -22,7 +22,7 @@ const Footer = () => {
                         <GithubIcon />
                     </motion.a>
                 </div>
-                <p className='pt-10'>&copy; 2023 Muhammad Ahmad Mughal. All rights reserved.</p>
+                <p className='pt-10 text-center'>&copy; 2023 Muhammad Ahmad Mughal. All rights reserved.</p>
             </div>
         </footer>
     );

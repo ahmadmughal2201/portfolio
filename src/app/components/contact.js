@@ -3,7 +3,7 @@ import React from 'react';
 
 const ContactMe = () => {
     return (
-        <section id="contact" className="px-32 py-20 dark:bg-primaryDark">
+        <section id="contact" className="px-16 md:px-32 lg:px-32  py-20 dark:bg-primaryDark">
             <div className="container mx-auto dark:text-light">
                 <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
                 <div className="flex flex-wrap">
@@ -36,7 +36,7 @@ const ContactMe = () => {
                     </div>
 
 
-                    <div className="w-1/2 md:w-1/2 pl-20">
+                    <div className="w-full md:w-1/2 pl-0 md:pl-20">
                         <div className="mb-4 items-center justify-center flex flex-col">
                             <a href="https://api.whatsapp.com/send?phone=923092990499" target="_blank" rel="noopener noreferrer" className="flex w-1/2 items-center">
                                 <div className=" bg-primaryLight  dark:bg-dark shadow p-10 mb-4 flex flex-col justify-center items-center rounded-xl">

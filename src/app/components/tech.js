@@ -3,7 +3,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 const Technologies = () => {
     return (
-        <section id="technologies" className="px-32 py-20 dark:bg-primaryDark">
+        <section id="technologies" className="px-16 md:px-32 lg:px-32 py-20 dark:bg-primaryDark">
             <div className="container mx-auto dark:text-light">
                 <h2 className="text-3xl font-bold mb-4">Technologies</h2>
                 <div className="flex flex-wrap justify-center items-center">

@@ -18,7 +18,7 @@ const Design = () => {
         <div id='home' className=' dark:bg-primaryDark h-full '>
             <div className='flex flex-wrap pt-10 relative'>
 
-                <div className='flex-1  px-32 py-16'>
+                <div className='flex-1 px-16 md:px-32 lg:px-32 pt-8 pb-28'>
                     <motion.p
                         className='text-l dark:text-light'
                         initial={{ opacity: 0, y: -20 }}
@@ -58,7 +58,7 @@ const Design = () => {
                 </div>
 
                 <motion.div
-                    className=' h-[500px] w-[500px] rounded-full absolute top-0 right-12'
+                    className='w-[370px] h-[370px] md:w-[500px] md:h-[500px] rounded-full absolute md:top-0 top-[351px] right-0 left-0 mx-auto md:left-[700px]'
                     style={{
                         backgroundImage: `url('/images/profile/circle.png')`,
                         backgroundSize: 'cover',
@@ -69,7 +69,8 @@ const Design = () => {
                     transition={{ duration: 0.5 }}
                 />
                 <div className='relative ' >
-                    <img src="/images/profile/me.png" alt="Profile Picture" className='h-[500px] w-[610px]  ' />
+                    <img src="/images/profile/me.png" alt="Profile Picture" className='
+                    md:h-[500px] md:w-[610px] sm:w-full sm:h-auto sm:max-h-full' />
                 </div>
             </div>
         </div>
