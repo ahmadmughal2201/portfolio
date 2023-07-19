@@ -22,7 +22,7 @@ const projects = [
     {
         image: '/images/projects/farmer.png',
         title: 'Farmers Representative',
-        description: ' An intuitive application designed to assist farmers in selling their crops, offering services like pick-up, drop-off, and storage. Users can also purchase crops directly from the platform',
+        description: ' An intuitive app designed to assist farmers in selling their crops. Users can also purchase crops directly from the platform',
     },
     // Add more projects as needed
 ];

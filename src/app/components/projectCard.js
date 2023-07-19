@@ -68,7 +68,7 @@ const ProjectCard = ({ image, title, description, index }) => {
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >
-            <div className="dark:bg-primaryDark bg-white flex flex-col items-center rounded-lg shadow-lg w-[320px] mb-4 transition-all duration-300 hover:scale-105">
+            <div className="dark:bg-primaryDark bg-white flex flex-col items-center rounded-lg shadow-lg h-[375px] w-[320px] mb-4 transition-all duration-300 hover:scale-105">
                 {media()}
                 <h3 className="text-xl font-bold p-2 dark:text-light">{title}</h3>
                 <p className="dark:text-light p-4 text-center

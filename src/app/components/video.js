@@ -25,9 +25,9 @@ const YouTubeVideo = () => {
             initial="hidden"
             whileInView="visible"
             variants={containerVariants}
-            className="video-container px-32 py-20 bg-primaryLight  dark:bg-dark">
+            className="video-container px-32 py-20 bg-primaryLight  dark:bg-dark sm:text-start text-center">
             <h2
-                className="text-3xl font-bold mb-4  dark:text-light">HIghlights</h2>
+                className="text-3xl font-bold mb-4  dark:text-light">Highlights</h2>
             <div
                 className="flex flex-col justify-center items-center">
                 <iframe
