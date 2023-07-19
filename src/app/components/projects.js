@@ -28,66 +28,57 @@ const projects = [
 ];
 
 const Projects = () => {
-    const [index, setIndex] = useState(0);
-    const ref = useRef(null);
 
-    const fadeInUp = {
-        hidden: { opacity: 0, y: 20 },
+
+    const containerVariants = {
+        hidden: {
+            opacity: 0,
+            y: 20,
+        },
         visible: {
             opacity: 1,
             y: 0,
             transition: {
-                duration: 0.5,
-                // This delay will apply to the initial animation only
-                delay: 0.2,
+                duration: 0.6,
+                delay: 0.3,
             },
         },
     };
 
-    const handleEnter = () => {
-        motion.set(ref, {
-            variants: fadeInUp,
-        });
-    };
-
-    const handleLeave = () => {
-        motion.set(ref, {
-            variants: {
-                ...fadeInUp,
-                opacity: 0,
-            },
-        });
-    };
-
 
     return (
-        <div id="projects-section" className='bg-primaryLight dark:bg-dark w-full pt-20 pb-20'>
-        <div className="px-16 md:px-32   pt-10 pb-5">
-            <h2 className="text-3xl font-bold ml-0 pb-8 dark:text-light">Projects</h2>
-
+        <div
+            id="projects-section"
+            className='bg-primaryLight dark:bg-dark w-full pt-20 pb-20 sm:text-start text-center'>
             <motion.div
-                className="flex flex-wrap justify-center gap-3"
                 initial="hidden"
-                animate="visible"
-                ref={ref}
-            >
-                {projects.map((project, index) => (
-                    <motion.div
-                        key={index}
-                        variants={fadeInUp}
-                        onEnter={handleEnter}
-                        onLeave={handleLeave}
-                    >
-                        <ProjectCard
-                            image={project.image}
-                            title={project.title}
-                            description={project.description}
-                            index={index}
-                        />
-                    </motion.div>
-                ))}
+                whileInView="visible"
+                variants={containerVariants}
+                className="px-16 md:px-32  pt-10 pb-5">
+                <h2
+                    className="text-3xl font-bold  pb-8 dark:text-light">
+                    Projects
+                </h2>
+
+                <div
+                    className="flex flex-wrap justify-center gap-3"
+
+                >
+                    {projects.map((project, index) => (
+                        <div
+                            key={index}
+
+                        >
+                            <ProjectCard
+                                image={project.image}
+                                title={project.title}
+                                description={project.description}
+                                index={index}
+                            />
+                        </div>
+                    ))}
+                </div>
             </motion.div>
-        </div>
         </div>
     );
 }

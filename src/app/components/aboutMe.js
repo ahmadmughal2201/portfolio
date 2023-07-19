@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-import { AnimatePresence, motion } from 'framer-motion';
+import { AnimatePresence, motion, whileInView } from 'framer-motion';
 
 const AboutMe = () => {
     const [expanded, setExpanded] = useState(false);
@@ -31,20 +31,19 @@ const AboutMe = () => {
 
     return (
         <section id="about" className=" px-16 md:px-32 lg:px-32 pt-20 pb-20 bg-primaryLight dark:bg-dark">
-            <div className="container mx-auto dark:text-light">
+            <motion.div 
+               initial="hidden"
+               whileInView="visible"
+               variants={containerVariants}
+             className="container mx-auto dark:text-light sm:text-start text-center">
                 <motion.h2
                     className="text-3xl font-bold mb-4"
-                    initial="hidden"
-                    animate="visible"
-                    variants={containerVariants}
                 >
                     About Me
                 </motion.h2>
-                <motion.p
+                <p
                     className="text-lg mb-4"
-                    initial="hidden"
-                    animate="visible"
-                    variants={containerVariants}
+ 
                 >
                     Asalamu Alaikum,
                     <br />
@@ -67,14 +66,14 @@ const AboutMe = () => {
                             </motion.div>
                         )}
                     </AnimatePresence>
-                </motion.p>
+                </p>
                 <motion.button
                     onClick={toggleExpanded}
                     className="bg-primaryDark text-light rounded-md px-4 py-2"
                 >
                     {expanded ? 'Show Less' : 'Show More'}
                 </motion.button>
-            </div>
+            </motion.div>
         </section>
     );
 };

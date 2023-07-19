@@ -1,10 +1,34 @@
 "use client"
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const ContactMe = () => {
+
+
+    const containerVariants = {
+        hidden: {
+            opacity: 0,
+            y: 20,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                delay: 0.3,
+            },
+        },
+    };
+
     return (
-        <section id="contact" className="px-16 md:px-32 lg:px-32  py-20 dark:bg-primaryDark">
-            <div className="container mx-auto dark:text-light">
+        <section
+         id="contact"
+          className="px-16 md:px-32 lg:px-32  py-20 dark:bg-primaryDark sm:text-start text-center">
+            <motion.div 
+                        initial="hidden"
+                        whileInView="visible"
+                        variants={containerVariants}
+            className="container mx-auto dark:text-light">
                 <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
                 <div className="flex flex-wrap">
                     <div className="w-full md:w-1/2 mb-6 md:mb-0">
@@ -32,13 +56,13 @@ const ContactMe = () => {
                                 placeholder="Your message"
                             ></textarea>
                         </div>
-                        <button className=" dark:bg-dark bg-primaryLight  dark:text-white px-4 py-2 rounded hover:bg-gray-500">Send Message</button>
+                        <button className=" dark:bg-dark bg-primaryLight  dark:text-white font-bold px-4 py-2 rounded hover:bg-gray-500">Send Message</button>
                     </div>
 
 
                     <div className="w-full md:w-1/2 pl-0 md:pl-20">
                         <div className="mb-4 items-center justify-center flex flex-col">
-                            <a href="https://api.whatsapp.com/send?phone=923092990499" target="_blank" rel="noopener noreferrer" className="flex w-1/2 items-center">
+                            <a href="https://api.whatsapp.com/send?phone=923092990499" target="_blank" rel="noopener noreferrer" className="flex  items-center">
                                 <div className=" bg-primaryLight  dark:bg-dark shadow p-10 mb-4 flex flex-col justify-center items-center rounded-xl">
 
 
@@ -66,7 +90,7 @@ const ContactMe = () => {
 
                     </div>
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };

@@ -14,37 +14,42 @@ const Design = () => {
         link.click();
     };
 
+    const circleVariant = {
+        hidden: { scale: 0, opacity: 0 },
+        show: { scale: 1, opacity: 1, transition: { duration: 0.7 } },
+    };
+
+    const textVariant = {
+        hidden: { opacity: 0, y: -20 },
+        show: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+    };
+
     return (
         <div id='home' className=' dark:bg-primaryDark h-full '>
-            <div className='flex flex-wrap pt-10 relative'>
+            <div className='flex flex-wrap pt-10 relative '>
 
-                <div className='flex-1 px-16 md:px-32 lg:px-32 pt-8 pb-28'>
-                    <motion.p
+                <motion.div
+                    variants={textVariant}
+                    initial='hidden'
+                    whileInView='show'
+                    className='flex-1 px-16 md:px-32 lg:px-32 pt-8 pb-28'>
+                    <p
                         className='text-l dark:text-light'
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
                     >
                         Asalamu Alaikum, I am
-                    </motion.p>
+                    </p>
 
-                    <motion.h1
+                    <h1
                         className='text-4xl font-bold mb-4 dark:text-light'
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.3 }}
                     >
                         Muhammad Ahmad
-                    </motion.h1>
+                    </h1>
 
-                    <motion.p
+                    <p
                         className='text-xl dark:text-light'
-                        initial={{ opacity: 0, y: -20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6, delay: 0.6 }}
                     >
                         Full Stack Developer, UI Designer
-                    </motion.p>
+                    </p>
 
                     <button
                         onClick={handleDownload}
@@ -55,22 +60,23 @@ const Design = () => {
                         Resume
                     </button>
 
-                </div>
+                </motion.div>
 
                 <motion.div
-                    className='w-[370px] h-[370px] md:w-[500px] md:h-[500px] rounded-full absolute md:top-0 top-[345px] right-0 left-0 mx-auto md:left-[700px]'
+                    className='w-[370px] h-[370px] md:w-[500px] md:h-[500px] rounded-full absolute lg:top-0 top-[345px] right-0 left-0 mx-auto  lg:left-[700px]'
                     style={{
                         backgroundImage: `url('/images/profile/circle.png')`,
                         backgroundSize: 'cover',
                         backgroundPosition: 'center',
                     }}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ duration: 0.7 }}
+                    variants={circleVariant}
+                    initial='hidden'
+                    whileInView='show'
+                    viewport={{ once: false, amount: 0.25 }}
                 />
-                <div className='relative ' >
+                <div className='relative  md:left-[100px] lg:left-0 ' >
                     <img src="/images/profile/me.png" alt="Profile Picture" className='
-                    md:h-[500px] md:w-[610px] sm:w-full sm:h-auto sm:max-h-full' />
+                    md:h-[500px] md:w-[610px]sm:w-full sm:h-auto sm:max-h-full' />
                 </div>
             </div>
         </div>

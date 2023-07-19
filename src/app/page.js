@@ -20,7 +20,7 @@ export default function Home() {
       <YouTubeVideo></YouTubeVideo>
       <ContactMe></ContactMe>
       <FloatingNavbar></FloatingNavbar>
-      <Footer></Footer>
+      <Footer> </Footer>
     </main>
-    )
+  )
 }

@@ -1,6 +1,6 @@
 "use client"
 import React, { useState, useRef } from 'react';
-import { motion } from 'framer-motion';
+import { motion, whileInView } from 'framer-motion';
 
 const ProjectCard = ({ image, title, description, index }) => {
     const [isHovered, setIsHovered] = useState(false);
@@ -35,7 +35,7 @@ const ProjectCard = ({ image, title, description, index }) => {
             y: 0,
             transition: {
                 duration: 0.5,
-                delay: index * 0.2,
+                delay: index * 0.4,
                 trigger: 'scroll',
             },
         },
@@ -62,6 +62,8 @@ const ProjectCard = ({ image, title, description, index }) => {
 
     return (
         <motion.div
+            initial="hidden"
+            whileInView="visible"
             variants={fadeInUp}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}

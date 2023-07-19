@@ -2,9 +2,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 const Technologies = () => {
+    const containerVariants = {
+        hidden: {
+            opacity: 0,
+            y: 20,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 0.6,
+                delay: 0.3,
+            },
+        },
+    };
+
     return (
+        
         <section id="technologies" className="px-16 md:px-32 lg:px-32 py-20 dark:bg-primaryDark">
-            <div className="container mx-auto dark:text-light">
+            <motion.div 
+              initial="hidden"
+              whileInView="visible"
+              variants={containerVariants}
+            className="container mx-auto dark:text-light sm:text-start text-center">
                 <h2 className="text-3xl font-bold mb-4">Technologies</h2>
                 <div className="flex flex-wrap justify-center items-center">
 
@@ -58,7 +78,7 @@ const Technologies = () => {
                     </motion.div>
 
                 </div>
-            </div>
+            </motion.div>
         </section>
     );
 };

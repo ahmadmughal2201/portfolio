@@ -4,7 +4,8 @@ import { FaHome, FaProjectDiagram, FaUser, FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-scroll';
 const FloatingNavbar = () => {
     return (
-        <nav className="fixed bottom-5 left-1/2 transform -translate-x-1/2 md:w-1/4 sm:w-full flex justify-around bg-dark backdrop-blur-md backdrop-filter backdrop-opacity-62 bg-opacity-60 p-4 rounded-full shadow-lg z-20"
+        <nav
+            className="fixed bottom-5 w-[300px] left-1/2 transform -translate-x-1/2 lg:w-1/4 md:w-1/2  flex justify-around bg-dark backdrop-blur-md backdrop-filter backdrop-opacity-62 bg-opacity-60 p-4 rounded-full shadow-lg z-20"
         >
             <Link
                 to="home"
