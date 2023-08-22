@@ -3,6 +3,7 @@ import React from 'react'
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 import { FaFileDownload } from 'react-icons/fa';
+import { TypingText } from './CustomTexts';
 
 
 const Design = () => {
@@ -45,11 +46,9 @@ const Design = () => {
                         Muhammad Ahmad
                     </h1>
 
-                    <p
-                        className='text-xl dark:text-light'
-                    >
-                        Full Stack Developer, UI Designer
-                    </p>
+                
+
+                    <TypingText title={' Full Stack Developer, UI Designer'} textStyles={ 'text-xl dark:text-light'} />
 
                     <button
                         onClick={handleDownload}
