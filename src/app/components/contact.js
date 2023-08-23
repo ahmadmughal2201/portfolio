@@ -21,31 +21,37 @@ const ContactMe = () => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        if (formData.name.trim() === '' || formData.email.trim() === '' || formData.message.trim() === '') {
+            alert('Please fill in all fields before submitting.');
+        }
 
-        const backendUrl = 'https://portfolio-contact-308d2-default-rtdb.firebaseio.com/messages.json'
+        else {
 
-        try {
-            const response = await fetch(backendUrl, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
+            const backendUrl = 'https://portfolio-contact-308d2-default-rtdb.firebaseio.com/messages.json'
 
-            if (response.ok) {
-                alert('Message sent successfully!');
-                setFormData({
-                    name: '',
-                    email: '',
-                    message: '',
+            try {
+                const response = await fetch(backendUrl, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(formData),
                 });
-            } else {
+
+                if (response.ok) {
+                    alert('Message sent successfully!');
+                    setFormData({
+                        name: '',
+                        email: '',
+                        message: '',
+                    });
+                } else {
+                    alert('An error occurred. Please try again later.');
+                }
+            } catch (error) {
+                console.error('Error sending message:', error);
                 alert('An error occurred. Please try again later.');
             }
-        } catch (error) {
-            console.error('Error sending message:', error);
-            alert('An error occurred. Please try again later.');
         }
     };
 
@@ -73,10 +79,10 @@ const ContactMe = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={containerVariants}
-                className=" p-24 container mx-auto dark:text-light">
+                className=" md:p-24 container mx-auto dark:text-light">
                 <h2 className="text-3xl font-bold mb-4">Contact Me</h2>
-                <div className="flex flex-wrap">
-                    <div className="w-full md:w-1/2 mb-6 md:mb-0">
+                <div className="flex flex-col md:flex-row">
+                    <div className="w-full  md:w-1/2 mb-6 md:mb-0">
                         <div className="mb-4 shadow-lg z-10">
                             <input
                                 type="text"

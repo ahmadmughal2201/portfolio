@@ -31,11 +31,13 @@ const AboutMe = () => {
 
     return (
         <section id="about" className=" px-16 md:px-32 lg:px-32 pt-20 pb-20 bg-primaryLight dark:bg-dark">
-            <motion.div 
-               initial="hidden"
-               whileInView="visible"
-               variants={containerVariants}
-             className="container mx-auto dark:text-light sm:text-start text-center">
+            <motion.div
+                initial="hidden"
+                whileInView="visible"
+                variants={containerVariants}
+                viewport={{ once: true, amount: 0.25 }}
+
+                className="container mx-auto dark:text-light sm:text-start text-center">
                 <motion.h2
                     className="text-3xl font-bold mb-4"
                 >
@@ -43,7 +45,7 @@ const AboutMe = () => {
                 </motion.h2>
                 <p
                     className="text-lg mb-4"
- 
+
                 >
                     Asalamu Alaikum,
                     <br />

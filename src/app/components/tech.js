@@ -24,6 +24,8 @@ const Technologies = () => {
               initial="hidden"
               whileInView="visible"
               variants={containerVariants}
+              viewport={{ once: true, amount: 0.25 }}
+
             className="container mx-auto dark:text-light sm:text-start text-center">
                 <h2 className="text-3xl font-bold mb-4">Technologies</h2>
                 <div className="flex flex-wrap justify-center items-center">

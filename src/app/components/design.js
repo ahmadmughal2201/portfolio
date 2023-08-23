@@ -48,7 +48,7 @@ const Design = () => {
 
                 
 
-                    <TypingText title={' Full Stack Developer, UI Designer'} textStyles={ 'text-xl dark:text-light'} />
+                    <TypingText title={' Full Stack Developer|UI Designer'} textStyles={ 'text-xl dark:text-light'} />
 
                     <button
                         onClick={handleDownload}
@@ -62,7 +62,7 @@ const Design = () => {
                 </motion.div>
 
                 <motion.div
-                    className='w-[370px] h-[370px] md:w-[500px] md:h-[500px] rounded-full absolute lg:top-0 top-[340px] right-0 left-0 mx-auto  lg:left-[700px]'
+                    className='w-[350px] h-[350px] md:w-[500px] md:h-[500px] rounded-full absolute lg:top-0 top-[340px] right-0 left-0 mx-auto  lg:left-[700px]'
                     style={{
                         backgroundImage: `url('/images/profile/circle.png')`,
                         backgroundSize: 'cover',

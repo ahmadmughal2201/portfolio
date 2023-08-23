@@ -25,6 +25,8 @@ const YouTubeVideo = () => {
             initial="hidden"
             whileInView="visible"
             variants={containerVariants}
+            viewport={{ once: true, amount: 0.25 }}
+
             className="video-container px-32 py-20 bg-primaryLight  dark:bg-dark sm:text-start text-center">
             <h2
                 className="text-3xl font-bold mb-4  dark:text-light">Highlights</h2>
