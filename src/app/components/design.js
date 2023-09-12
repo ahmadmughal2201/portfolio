@@ -27,7 +27,7 @@ const Design = () => {
 
     return (
         <div id='home' className=' dark:bg-primaryDark h-full '>
-            <div className='flex flex-wrap pt-10 relative '>
+            <div className='flex lg:flex-row flex-col pt-0 md:pt-10 relative '>
 
                 <motion.div
                     variants={textVariant}
@@ -46,9 +46,9 @@ const Design = () => {
                         Muhammad Ahmad
                     </h1>
 
-                
 
-                    <TypingText title={' Full Stack Developer | UI Designer'} textStyles={ 'text-xl dark:text-light'} />
+
+                    <TypingText title={' Full Stack Developer | UI Designer'} textStyles={'text-xl dark:text-light'} />
 
                     <button
                         onClick={handleDownload}
@@ -60,22 +60,23 @@ const Design = () => {
                     </button>
 
                 </motion.div>
-
-                <motion.div
-                    className='w-[350px] h-[350px] md:w-[500px] md:h-[500px] rounded-full absolute lg:top-0 top-[340px] right-0 left-0 mx-auto  lg:left-[700px]'
-                    style={{
-                        backgroundImage: `url('/images/profile/circle.png')`,
-                        backgroundSize: 'cover',
-                        backgroundPosition: 'center',
-                    }}
-                    variants={circleVariant}
-                    initial='hidden'
-                    whileInView='show'
-                    viewport={{ once: false, amount: 0.25 }}
-                />
-                <div className='relative  md:left-[100px] lg:left-0 ' >
-                    <img src="/images/profile/me.png" alt="Profile Picture" className='
+                <div className='flex justify-center'>
+                    <motion.div
+                        className='w-[350px] h-[350px] md:w-[500px] md:h-[500px] rounded-full absolute bottom-[20px]'
+                        style={{
+                            backgroundImage: `url('/images/profile/circle.png')`,
+                            backgroundSize: 'cover',
+                            backgroundPosition: 'center',
+                        }}
+                        variants={circleVariant}
+                        initial='hidden'
+                        whileInView='show'
+                        viewport={{ once: false, amount: 0.25 }}
+                    />
+                    <div className='relative ' >
+                        <img src="/images/profile/me.png" alt="Profile Picture" className='
                     md:h-[500px] md:w-[610px]sm:w-full sm:h-auto sm:max-h-full' />
+                    </div>
                 </div>
             </div>
         </div>
