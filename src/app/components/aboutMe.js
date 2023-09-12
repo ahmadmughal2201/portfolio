@@ -49,7 +49,7 @@ const AboutMe = () => {
                 >
                     Asalamu Alaikum,
                     <br />
-                    A passionate third-year BSCS student with a strong foundation in programming. Recognized for my outstanding academic performance with straight As in the first year, I’vehoned my skills in C++, C#, React, Next.js, Tailwind, Flutter, .NET, and database technologies.
+                    I’m Muhammad Ahmad, a passionate third-year BSCS student from UET Lahore, with a strong foundation in programming. Recognized for my outstanding academic performance with straight As in the first year, I’vehoned my skills in C++, C#, React, Next.js, Tailwind, Flutter, .NET, and database technologies.
                     <br />
                     <AnimatePresence>
                         {expanded && (

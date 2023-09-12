@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className='min-h-screen dark:bg-primaryDark'>
       <NavBar></NavBar>
-      <Design className=' flex-grow'></Design>
+      <Design className=' '></Design>
       <AboutMe></AboutMe>
       <Technologies></Technologies>
       <Projects ></Projects>

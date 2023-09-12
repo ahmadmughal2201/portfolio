@@ -26,7 +26,7 @@ const Design = () => {
     };
 
     return (
-        <div id='home' className=' dark:bg-primaryDark h-full '>
+        <div id='home' className=' dark:bg-primaryDark h-full md:mt-0 -mt-6'>
             <div className='flex lg:flex-row flex-col pt-0 md:pt-10 relative '>
 
                 <motion.div
@@ -60,7 +60,7 @@ const Design = () => {
                     </button>
 
                 </motion.div>
-                <div className='flex justify-center'>
+                <div className='flex justify-center md:mt-0 -mt-6'>
                     <motion.div
                         className='w-[350px] h-[350px] md:w-[500px] md:h-[500px] rounded-full absolute bottom-[20px]'
                         style={{
