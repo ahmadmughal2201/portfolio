@@ -11,7 +11,7 @@ const NavBar = () => {
   const [mode, setMode] = useThemeSwitcher();
 
   return (
-    <header className='w-full px-16 md:px-26 lg:px-32 md:py-8 py-5 bg-primary font-medium flex items-center justify-between dark:text-light sticky bg-opacity-75 top-0 z-10 dark:bg-opacity-75  dark:bg-dark'>
+    <header className='w-full px-16 md:px-26 lg:px-32 md:py-8 py-5 bg-primaryLight font-medium flex items-center justify-between dark:text-light sticky bg-opacity-75 top-0 z-10 dark:bg-opacity-75  dark:bg-dark z-100'>
        <p className='font-bold  dark:text-light'>Muhammad Ahmad</p>
 
       <nav className='flex items-center justify-center flex-wrap'>

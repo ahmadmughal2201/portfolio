@@ -1,32 +1,22 @@
 "use client"
 import React, { useState, useRef } from 'react';
 import { motion, whileInView } from 'framer-motion';
+import {  FaEye } from 'react-icons/fa';
 
-const ProjectCard = ({ image, title, description, index }) => {
+
+const ProjectCard = ({ image, video, title, description, index, link }) => {
     const [isHovered, setIsHovered] = useState(false);
     const videoRef = useRef(null);
 
     const handleMouseEnter = () => {
         setIsHovered(true);
-        playVideo();
     };
 
     const handleMouseLeave = () => {
         setIsHovered(false);
-        pauseVideo();
     };
 
-    const playVideo = () => {
-        if (videoRef.current) {
-            videoRef.current.play();
-        }
-    };
 
-    const pauseVideo = () => {
-        if (videoRef.current) {
-            videoRef.current.pause();
-        }
-    };
 
     const fadeInUp = {
         hidden: { opacity: 0, y: 20 },
@@ -42,11 +32,11 @@ const ProjectCard = ({ image, title, description, index }) => {
     };
 
     const media = () => {
-        if (image.endsWith('.mp4')) {
+        if (isHovered && video) {
             return (
                 <video
                     ref={videoRef}
-                    src={image}
+                    src={video}
                     className="w-full mb-2 rounded-lg shadow-xl z-10"
                     autoPlay
                     loop
@@ -55,7 +45,16 @@ const ProjectCard = ({ image, title, description, index }) => {
             );
         } else {
             return (
-                <img src={image} alt={title} className="w-full mb-2 rounded-lg shadow-xl z-10" />
+                <div className="relative">
+                    <img src={image} alt={title} className="w-full mb-2 rounded-lg shadow-xl z-10" />
+                    {isHovered && link &&(
+                        <a href={link} target="_blank" rel="noopener noreferrer" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <FaEye
+                                className="text-white p-2 rounded-full hover:bg-gray-900 bg-dark backdrop-blur-md backdrop-filter backdrop-opacity-62 bg-opacity-60"
+                                style={{ width: "40px", height: "40px" }}
+                            />                    </a>
+                    )}
+                </div>
             );
         }
     };
@@ -65,6 +64,7 @@ const ProjectCard = ({ image, title, description, index }) => {
             initial="hidden"
             whileInView="visible"
             variants={fadeInUp}
+            viewport={{ once: true, amount: 0.25 }}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
         >

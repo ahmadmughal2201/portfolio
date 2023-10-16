@@ -5,7 +5,7 @@ import { Link } from 'react-scroll';
 const FloatingNavbar = () => {
     return (
         <nav
-            className="fixed bottom-5 w-[300px] left-1/2 transform -translate-x-1/2 lg:w-1/4 md:w-1/2  flex justify-around bg-dark backdrop-blur-md backdrop-filter backdrop-opacity-62 bg-opacity-60 p-4 rounded-full shadow-lg z-20"
+            className="fixed bottom-5 md:bottom-8 w-[300px] left-1/2 transform -translate-x-1/2 lg:w-1/4 md:w-1/2 h-22  flex justify-around bg-dark backdrop-blur-md backdrop-filter backdrop-opacity-62 bg-opacity-60 p-4 rounded-full shadow-lg z-20"
         >
             <Link
                 to="home"
