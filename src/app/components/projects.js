@@ -9,7 +9,7 @@ const projects = [
         image: '/images/projects/classroom.png',
         video: '/images/projects/classroom.mp4',
         title: 'Classrooms',
-        description: 'Classrooms connects students and educators. Manage classes, assignments, and assessments. Built using Flutter for cross-platform compatibility and backed by a Node.js and MongoDB stack',
+        description: 'Classrooms connects students and educators. Manage classes, assignments, and assessments. Built using Flutter and backed by a Node.js and MongoDB stack',
         tags: ['Mobile'],
     },
  
