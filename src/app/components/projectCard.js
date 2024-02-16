@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useRef } from 'react';
 import { motion, whileInView } from 'framer-motion';
-import {  FaEye } from 'react-icons/fa';
+import { FaEye } from 'react-icons/fa';
 
 
 const ProjectCard = ({ image, video, title, description, index, link }) => {
@@ -46,13 +46,15 @@ const ProjectCard = ({ image, video, title, description, index, link }) => {
         } else {
             return (
                 <div className="relative">
-                    <img src={image} alt={title} className="w-full mb-2 rounded-lg shadow-xl z-10" />
-                    {isHovered && link &&(
+                    <img src={image} alt={title} className="min-w-full mb-2 rounded-lg shadow-xl z-10 max-h-[180px] object-stretch "
+                    />
+                    {isHovered && link && (
                         <a href={link} target="_blank" rel="noopener noreferrer" className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
                             <FaEye
                                 className="text-white p-2 rounded-full hover:bg-gray-900 bg-dark backdrop-blur-md backdrop-filter backdrop-opacity-62 bg-opacity-60"
                                 style={{ width: "40px", height: "40px" }}
-                            />                    </a>
+                            />
+                        </a>
                     )}
                 </div>
             );
@@ -71,8 +73,9 @@ const ProjectCard = ({ image, video, title, description, index, link }) => {
             <div className="dark:bg-primaryDark bg-white flex flex-col items-center rounded-lg shadow-lg h-[375px] w-[320px] mb-4 transition-all duration-300 hover:scale-105">
                 {media()}
                 <h3 className="text-xl font-bold p-2 dark:text-light">{title}</h3>
-                <p className="dark:text-light p-4 text-center
-                ">{description}</p>
+                <p className="dark:text-light py-2 px-2 text-justify ">
+                    {description}
+                </p>
             </div>
         </motion.div>
     );
