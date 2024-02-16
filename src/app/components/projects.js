@@ -89,8 +89,8 @@ const Projects = () => {
         <div id="projects-section" className='bg-primaryLight dark:bg-dark w-full pt-20 pb-20 sm:text-start text-center'>
             <motion.div
                 initial="hidden"
-                whileInView="visible"
-                variants={containerVariants}
+                whileInView={{ ...containerVariants, threshold: 0.1 }}
+
                 viewport={{ once: true, amount: 0.25 }}
                 className="px-16 md:px-32  pt-10 pb-5"
             >
