@@ -96,7 +96,7 @@ const Projects = () => {
             >
                 <h2 className="text-3xl font-bold  pb-8 dark:text-light">Projects</h2>
 
-                <div className="flex justify-center gap-3 mb-5">
+                <div className="flex flex-wrap justify-center gap-3 mb-5">
                     {tabs.map(tab => (
                         <button
                             key={tab}
