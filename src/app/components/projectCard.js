@@ -73,7 +73,7 @@ const ProjectCard = ({ image, video, title, description, index, link }) => {
             <div className="dark:bg-primaryDark bg-white flex flex-col items-center rounded-lg shadow-lg h-[375px] w-[320px] mb-4 transition-all duration-300 hover:scale-105">
                 {media()}
                 <h3 className="text-xl font-bold p-2 dark:text-light">{title}</h3>
-                <p className="dark:text-light py-2 px-2 text-justify ">
+                <p className="dark:text-light pb-3 px-2 text-justify ">
                     {description}
                 </p>
             </div>

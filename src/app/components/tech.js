@@ -39,6 +39,20 @@ const Technologies = () => {
 
                     <motion.div className="mx-4" whileHover={{ y: -2, scale:1.2 }} whileTap={{ scale: 0.7 }}>
                         <img
+                            src={'/images/icons/next.svg'}
+                            className="w-10 h-10"
+                        />
+                    </motion.div>
+
+                    <motion.div className="mx-4" whileHover={{ y: -2, scale:1.2 }} whileTap={{ scale: 0.7 }}>
+                        <img
+                            src={'/images/icons/unity.svg'}
+                            className="w-10 h-10"
+                        />
+                    </motion.div>
+
+                    <motion.div className="mx-4" whileHover={{ y: -2, scale:1.2 }} whileTap={{ scale: 0.7 }}>
+                        <img
                             src={'/images/icons/js.png'}
                             className="w-10 h-10"
                         />

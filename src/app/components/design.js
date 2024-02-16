@@ -48,7 +48,7 @@ const Design = () => {
 
 
 
-                    <TypingText title={' Full Stack Developer | UI Designer'} textStyles={'text-xl dark:text-light'} />
+                    <TypingText title={' Full Stack Developer'} textStyles={'text-xl dark:text-light'} />
 
                     <button
                         onClick={handleDownload}
