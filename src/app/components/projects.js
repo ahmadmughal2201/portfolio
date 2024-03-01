@@ -10,7 +10,7 @@ const projects = [
     title: "Classrooms",
     link: "https://github.com/ahmadmughal2201/Classroom-Complete",
     description:
-      "Classrooms connects students and educators. Manage classes, assignments, and assessments. Built using Flutter and backed by a Node.js and MongoDB stack",
+      "Classrooms connects students and educators. Manage classes, assignments, and assessments. Built with Flutter, Node.js and MongoDB stack",
     tags: ["Mobile"],
   },
 
@@ -45,7 +45,7 @@ const projects = [
     image: "/images/projects/flappy.png",
     title: "Galaxy Shooter",
     video: "",
-    description: "The classic flappy bird, made in Unity",
+    description: "The classic Flappy Bird, made in Unity",
     link: "https://ahmadmughal.itch.io/flappy-bird",
 
     tags: ["Game"],

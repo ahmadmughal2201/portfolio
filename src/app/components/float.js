@@ -29,7 +29,7 @@ const navVariants = {
 const FloatingNavbar = () => {
     return (
         <motion.nav
-            className="fixed bottom-5 md:bottom-8 w-[300px] left-[15%] sm:left-[35%] lg:w-1/4 md:w-1/2 h-22  flex justify-around bg-dark backdrop-blur-md backdrop-filter backdrop-opacity-62 bg-opacity-60 p-4 rounded-full shadow-lg z-20"
+            className="fixed bottom-5 md:bottom-8 w-[300px] left-[10%] sm:left-[35%] lg:w-1/4 md:w-1/2 h-22  flex justify-around bg-dark backdrop-blur-md backdrop-filter backdrop-opacity-62 bg-opacity-60 p-4 rounded-full shadow-lg z-20"
             variants={navVariants}
             initial="hidden"
             animate="show"
