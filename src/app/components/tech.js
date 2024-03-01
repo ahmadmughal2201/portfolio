@@ -28,7 +28,7 @@ const Technologies = () => {
 
             className="container mx-auto dark:text-light sm:text-start text-center">
                 <h2 className="text-3xl font-bold mb-4">Technologies</h2>
-                <div className="flex flex-wrap justify-center items-center">
+                <div className="flex flex-wrap justify-center items-center gap-y-4">
 
                     <motion.div className="mx-4" whileHover={{ y: -2, scale:1.2 }} whileTap={{ scale: 0.7 }}>
                         <img
