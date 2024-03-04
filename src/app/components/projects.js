@@ -43,7 +43,7 @@ const projects = [
   },
   {
     image: "/images/projects/flappy.png",
-    title: "Galaxy Shooter",
+    title: "Flappy Bird",
     video: "",
     description: "The classic Flappy Bird, made in Unity",
     link: "https://ahmadmughal.itch.io/flappy-bird",
@@ -73,7 +73,7 @@ const projects = [
     video: "/images/projects/gui.mp4",
     title: "Train Station Management",
     description:
-      "A  Windows form application that empowers efficient management of trains, stations, and bookings, ensuring a streamlined experience for railway operations and passengers alike.",
+      "A  Windows form application that empowers efficient management of trains, stations, and bookings.",
     tags: ["Desktop"],
   },
   {
